@@ -14,3 +14,6 @@ class Article(models.Model):
 
     def __str__(self) -> str:
         return self.title
+
+    def validate_title(self):
+        return len(self.title) <= 30
